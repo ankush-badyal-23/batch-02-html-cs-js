@@ -1,0 +1,9 @@
+#name {
+    border: none;
+    border-bottom: orangered 2px double;
+}
+.input-focus:focus {
+    border: none;
+    background: palegoldenrod;
+    border-bottom: orangered 2px double;
+}
