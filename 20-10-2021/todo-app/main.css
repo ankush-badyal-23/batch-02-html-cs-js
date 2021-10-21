@@ -1,0 +1,41 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-size: 18px;
+}
+html {
+  text-align: center;
+  font: 16pt "Arial Black";
+}
+
+li {
+  list-style: none;
+  height: 32px;
+}
+
+.del-task {
+  padding: 0 30px;
+  margin: 0px 5px 0 20px;
+  background-color: crimson;
+  font-weight: 900;
+  font-size: 1.05rem;
+  cursor: pointer;
+}
+.del-task:hover {
+  background-color: lightgrey;
+  color: crimson;
+}
+.del-task:active {
+  background-color: lightgrey;
+  color: crimson;
+  font-size: 1rem;
+}
+.task {
+  padding: 5px;
+  margin: 5px;
+}
+
+.checked {
+  text-decoration: line-through;
+  color:gray;
+}
