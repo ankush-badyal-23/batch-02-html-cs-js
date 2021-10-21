@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object: Array</title>
+</head>
+<body>
+    <script>
+        //Arrays
+        let a = [];
+        let b = new Array();
+        let c = new Array(10);
+        let wDay = ['M','T', 'W', 'Th', 'F', 'S', 'Su'];
+        console.log(a, b, c);
+        console.log(wDay[3]);
+        c[0] = 'Jan';
+        c[1] = 'Feb';
+        c[2] = 'Mar';
+        c[3] = 'Apr';
+        c[4] = 'May';
+        c[5] = 'Jun';
+        c[6] = 'Jul';
+        c[7] = 'Aug';
+        c[8] = 'Sep';
+        c[9] = 'Oct';
+        c[10] = 'Nov';
+        c[11] = 'Dec';
+        console.log(c);
+        a[24] = 'Magic';
+        console.log(a);
+
+        console.log(c.length);
+        c.forEach(function(value) {
+            console.info(value.toLocaleUpperCase());
+        });
+        a.push('Science');
+        console.log(a.toString());
+        a.unshift(a.pop());
+        console.log(a.toLocaleString());
+        a.unshift(a.pop());
+        console.log(a.toString());
+        a.push(a.shift());
+        console.log(a.toString());
+        a.push(a.shift());
+        console.log(a.toString());
+        // a.push(a.shift());
+        // console.log(a.toString());
+        // console.log(a.reverse());
+
+        console.log(('Reverse String.').split('').reverse().join(''));
+        console.log(('Reverse String.').split('').sort().reverse().join(''));
+
+        console.log(c.filter(function(val){
+            return val.match(/a/i);
+        }));
+        a.fill(7, 0, 24);
+        console.log('Map', a.map(function(val, index){
+            if(Number.isInteger(val)) {
+                return val * index;
+            } else {
+                return val;
+            }
+        }));
+        console.log('original',a);
+
+        console.log(c.find(function(val){return val == 'Sept'}));
+        console.log(c.indexOf('Sep'));
+        console.log(c.includes('Sept'));
+    </script>
+</body>
+</html>
