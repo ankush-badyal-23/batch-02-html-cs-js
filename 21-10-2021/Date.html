@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Date</title>
+  </head>
+  <body>
+    <main>
+      <div id="cal"></div>
+      <div id="clo"></div>
+    </main>
+    <script>
+      //Date
+      console.log("Before SetInterval");
+      let wDay = [ "Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+      let month = [
+        "Jan",
+        "Feb",
+        "Mar",
+        "Apr",
+        "May",
+        "Jun",
+        "Jul",
+        "Aug",
+        "Sep",
+        "Oct",
+        "Nov",
+        "Dec",
+      ];
+      let cal = document.querySelector("#cal");
+      let clock = document.querySelector("#clo");
+      setInterval(function () {
+        const d = new Date();
+        console.log("inside SetInterval");
+        clock.innerText = `${d.getHours()}:${d.getMinutes()}:${d.getSeconds()}:${d.getMilliseconds()}`;
+        cal.innerText = `${wDay[d.getDay()]} ${d.getDate()}-${month[d.getMonth()]}-${d.getFullYear()}`;
+      }, 1000);
+      console.log("After SetInterval");
+    </script>
+  </body>
+</html>
