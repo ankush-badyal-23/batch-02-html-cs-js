@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maps</title>
+</head>
+<body>
+    <script>
+        // Maps, Objects and Sets
+        const nameMap = new Map();
+        nameMap.set('name', 'Ankush');
+        nameMap.set('name1', 'Jitendra');
+        nameMap.set(1, 'One');
+        nameMap.set(true,'Truth value');
+        const nameArray = ['name'];
+        nameMap.set(nameArray, 'Array as key');  
+        const myObj = {
+            name: 'Ankush',
+            age: 41,
+            1: 'one',
+            true: 'truth'
+        }
+        nameMap.set(myObj, 'Object as key');
+        console.log(nameMap);
+
+        console.log(nameMap.get(1));
+        console.log(nameMap.get(true));
+        console.log(nameMap.get('name1'));
+        console.log(nameMap.get(nameArray));
+        console.log(nameMap.get(myObj));
+        let mapKeys = nameMap.keys();
+        for(let i=0; i< nameMap.size; i ++) {
+            console.log(typeof mapKeys.next().value);
+        }
+        Object.keys(myObj).forEach(k => console.log(typeof k, k));
+
+
+        //Sets 
+        const mySet = new Set();
+        mySet.add(1);
+        mySet.add(1);
+        mySet.add('name');
+        mySet.add(1);
+        mySet.add('ankush');
+        mySet.add(1);
+        mySet.add(nameArray);
+        mySet.add(1);
+        mySet.add(myObj);
+        mySet.add(1);
+        mySet.add(nameMap);
+        mySet.add(1);
+        console.log(mySet);
+        console.log(mySet.entries());
+        console.log(mySet.keys());
+    </script>
+</body>
+</html>
