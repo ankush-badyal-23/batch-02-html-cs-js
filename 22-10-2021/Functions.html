@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Functions</title>
+  </head>
+  <body>
+    <script>
+      function sum(x, y) {
+        return x + y;
+      }
+
+      function getObject() {
+        return {
+          name: "Ankush",
+          age: 41,
+        };
+      }
+
+      const mul = function (x, y) {
+        return x * y;
+      };
+
+      const div = (x, y) => {
+        return x / y;
+      };
+
+      const min = (x, y) => x - y;
+      const getObj = () => ({ name: "Ankush", age: 41 });
+
+      console.log(getObject());
+      console.log(getObj());
+      console.log(sum.call(null, 10, 20, 30, 40));
+      console.log(sum.apply(window, [10, 20]));
+
+      function sumN() {
+        console.log(arguments);
+        let sum = 0;
+        for (let i = 0; i < arguments.length; i++) {
+          sum += arguments[i];
+        }
+        return sum;
+      }
+
+      function onEnd(value) {
+          console.log('On end value is', value);
+      }
+
+      function onEnd2(value) {
+          document.write('This is a callback ', value);
+      }
+
+      function main(cb) {
+          console.log('inside main');
+          const v = sumN(10,20,30,40,50, mul(8, 4), div(45,3), min(10,8));
+          /**
+           *Above is equivallent to :
+           let mu = mul(8,4);
+           let d = div(45,3);
+           let mi = min(10,8);
+           const v = sumN(10,20,30,40,50,mu, d, mi); 
+           */
+          cb(v);
+      }
+
+      main(onEnd);
+      main(onEnd2);
+    </script>
+  </body>
+</html>

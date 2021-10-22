@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>function Clousers and IIFE</title>
+  </head>
+  <body>
+    <script>
+      //IIFE - Immediately Invoked Functional Expressions
+      (function () {
+        //statement
+        console.log("Hey I am inside an IIFE");
+      })();
+
+      main(); //Hoaisting
+      function main() {
+        x = 10;
+        console.log("Hey this is not an IIFE");
+        console.log("value of x inside function", x);
+        var x = 20; //Hoaisting
+        function insideMain() {
+          console.log("second value of x inside function", x);
+        }
+        insideMain();
+      }
+      // console.log('value of x outside function', x);
+      // mainAgain();
+      // var mainAgain = function() {
+      //     console.log('this is a main again');
+      // }
+      function dividend(x) {
+        return function (y) {
+          if (y === 0) {
+            console.warn("Can not divide by zero");
+            return;
+          }
+          return (x / y).toFixed(3);
+        };
+      }
+
+      const div108 = dividend(108);
+      console.log(div108(0));
+      console.log(div108(1));
+      console.log(div108(2));
+      console.log(div108(3));
+      console.log(div108(4));
+      console.log(div108(5));
+      console.log(div108(6));
+      console.log(div108(7));
+      console.log(div108(8));
+      console.log(div108(9));
+      console.log(div108(10));
+     
+
+      const div1024 = dividend(1024);
+      console.log(div1024(0));
+      console.log(div1024(1));
+      console.log(div1024(2));
+      console.log(div1024(3));
+      console.log(div1024(4));
+      console.log(div1024(5));
+      console.log(div1024(6));
+      console.log(div1024(7));
+      console.log(div1024(8));
+      console.log(div1024(9));
+      console.log(div1024(10));
+    </script>
+  </body>
+</html>
