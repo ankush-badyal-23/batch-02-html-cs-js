@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MouseEvent</title>
+    <style>
+      #play-ground {
+        width: 800px;
+        height: 600px;
+        background: skyblue;
+        border: 5px double blue;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="play-ground"></div>
+    <script>
+      const pg = document.getElementById("play-ground");
+      pg.onmousedown = onMouseEvent;
+      pg.onmouseenter = onMouseEvent;
+      pg.onmouseleave = onMouseEvent;
+      pg.onmousemove = onMouseEvent;
+      pg.onmouseout = onMouseEvent;
+      pg.onmouseover = onMouseEvent;
+      pg.onmouseup = onMouseEvent;
+      let isMouseDown = false;
+      function onMouseEvent(e) {
+        switch (e.type) {
+          case "mousedown":
+            isMouseDown = true;
+            break;
+          case "mouseup":
+            isMouseDown = false;
+            break;
+          case "mousemove":
+            if (!isMouseDown) return;
+            console.log(e.clientX, e.clientY);
+            break;
+          default:
+            console.log(e.type);
+        }
+      }
+    </script>
+  </body>
+</html>
