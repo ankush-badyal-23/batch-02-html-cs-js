@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document Object Model</title>
+</head>
+<body>
+    <script>
+        // Root window
+        const {innerHeight, innerWidth, devicePixelRatio} = window;
+        const {availHeight, availWidth, orientation} = window.screen;
+        console.log(`${innerWidth}px X ${innerHeight}px`);
+        console.log(`ppi(pixel per inch) - ${devicePixelRatio}`);
+        console.log(`Screen size: ${availWidth}px X ${availHeight}px`);
+        console.log(`Angle - ${orientation.angle} and orientation ${orientation.type}`);
+        console.log(navigator);
+        console.log(window);
+
+        // setTimeout(function(){
+        //     location.href = "https://google.com";
+        // }, 5000);
+        //alert
+        //prompt
+        //confirm
+    </script>
+</body>
+</html>
