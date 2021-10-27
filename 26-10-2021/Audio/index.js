@@ -3,10 +3,11 @@ const playlist = [
     {name:"Ken", src:"https://archive.org/download/md_music_super_street_fighter_ii_the_new_challengers/12%20-%20Ken%27s%20Theme%20-%20Yoko%20Shimomura.mp3"},
     {name:"Chun li", src:"https://archive.org/download/md_music_super_street_fighter_ii_the_new_challengers/13%20-%20Chun%20Li%27s%20Theme%20-%20Yoko%20Shimomura.mp3"},
     {name:"E. Honda", src:"https://archive.org/download/md_music_super_street_fighter_ii_the_new_challengers/08%20-%20E%20Honda%27s%20Theme%20-%20Yoko%20Shimomura.mp3"},
-    {name:"M. Bison", src:"https://archive.org/download/md_music_super_street_fighter_ii_the_new_challengers/25%20-%20M%20Bison%27s%20Theme%20-%20Yoko%20Shimomura.mp3"}
+    {name:"M. Bison", src:"https://archive.org/download/md_music_super_street_fighter_ii_the_new_challengers/25%20-%20M%20Bison%27s%20Theme%20-%20Yoko%20Shimomura.mp3"},
+    {name:'4 Yaar - Parmish Verma', src:'./4-Yaar-Parmish-Verma.mp3'},
+    {name:'Diamond - Gurnam Bhular', src:'./Diamond-Gurnam-Bhullar.mp3'}
+
 ]
-
-
 
 const audioPlayer = document.createElement('audio');
 const mainDiv = document.querySelector('#main');
