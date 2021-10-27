@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>XHR - XML HTTP Request</title>
+  </head>
+  <body>
+    <main>
+        <div>
+      <input
+        type="text"
+        placeholder="Enter text here to search"
+        id="serach-text"
+      /> 
+      <input type="button" id="search" value="Search">
+    </div>
+    <div>
+        <ul id='result'></ul>
+    </div>
+    </main>
+    <script>
+      const xhr = new XMLHttpRequest();
+      xhr.withCredentials = true;
+      const searchText = document.getElementById("serach-text");
+      const result = document.getElementById("result");
+      const search = document.getElementById("search");
+      search.onclick = function () {
+          result.innerHTML = '';
+        if (searchText.value.length > 2) {
+          xhr.addEventListener("readystatechange", function () {
+            if (this.readyState === this.DONE) {
+              console.log(this.response);
+                this.response.results.forEach(element => {
+                    const item = document.createElement('li');
+                    result.append(item);
+                    item.innerHTML = `<a href="${element.link}">${element.title}</a><br><p>${element.description}</p>`
+                });
+            }
+          });
+
+          xhr.open(
+            "GET",
+            `https://google-search3.p.rapidapi.com/api/v1/search/q=${searchText.value}&num=10`
+          );
+          xhr.responseType = 'json';
+          xhr.setRequestHeader("x-user-agent", "desktop");
+          xhr.setRequestHeader(
+            "x-rapidapi-host",
+            "google-search3.p.rapidapi.com"
+          );
+          xhr.setRequestHeader(
+            "x-rapidapi-key",
+            "46184cc6cfmsh8158e5a64c009fap162410jsna2ba68136244"
+          );
+          xhr.send();
+        }
+      };
+    </script>
+  </body>
+</html>

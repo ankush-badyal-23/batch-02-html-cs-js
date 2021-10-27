@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Promise</title>
+  </head>
+  <body>
+    <script>
+      console.log("Start of program");
+      const p1 = new Promise(function (resolve, reject) {
+        const rand = Math.random();
+        console.log("random number", rand);
+        if (rand > 0.8) {
+          reject(rand);
+        } else {
+          resolve(rand);
+        }
+      }).then(
+        function (data) {
+          console.log("resolved", data);
+        },
+        function (data) {
+          console.log("rejected", data);
+        }
+      );
+      // await p1; // this will throw error;
+      console.log("promise", p1);
+      console.log("End program");
+    </script>
+  </body>
+</html>
