@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fetch Api</title>
+  </head>
+  <body>
+    <main>
+      <div>
+        <input
+          type="text"
+          placeholder="Enter text here to search"
+          id="serach-text"
+        />
+        <input type="button" id="search" value="Search" />
+      </div>
+      <div>
+        <ul id="result"></ul>
+      </div>
+    </main>
+    <script>
+      const searchText = document.getElementById("serach-text");
+      const result = document.getElementById("result");
+      const search = document.getElementById("search");
+      search.onclick = function () {
+        result.innerHTML = "";
+        if (searchText.value.length > 2) {
+          fetch(
+            "https://imdb8.p.rapidapi.com/auto-complete?q="+window.encodeURI(searchText.value),
+            {
+              method: "GET",
+              headers: {
+                "x-rapidapi-host": "imdb8.p.rapidapi.com",
+                "x-rapidapi-key":
+                  "46184cc6cfmsh8158e5a64c009fap162410jsna2ba68136244",
+              },
+            }
+          ).then((response) => response.json())
+          .then((response) => {
+              response.d.forEach(element => {
+                  const item = document.createElement("li");
+                  result.appendChild(item);
+                  item.innerHTML = `<img src="${element.i?.imageUrl}" width=60 height=90><span>${element.l}</span>`
+              });
+            })
+            .catch((err) => {
+              console.error(err);
+            });
+        }
+      };
+      
+    </script>
+  </body>
+</html>
