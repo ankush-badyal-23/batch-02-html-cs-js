@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Canvas API - Images</title>
+    <style>
+      #my-canvas {
+        border: 2px double dodgerblue;
+        background-color: ghostwhite;
+        /* width:640px; */
+        /* height:540px; */
+      }
+    </style>
+  </head>
+  <body>
+    <canvas id="my-canvas" width="800" height="600"></canvas>
+    <script>
+      const char_w = 102.5;
+      const char_h = 112;
+      const frames = [
+        { x: 0, y: 0 },
+        { x: char_w, y: 0 },
+        { x: char_w * 2, y: 0 },
+        { x: 0, y: char_h },
+        { x: char_w, y: char_h },
+        { x: char_w * 2, y: char_h },
+        { x: 0, y: char_h * 2 },
+        { x: 0, y: char_h * 3 },
+        { x: char_w, y: char_h * 3 },
+        { x: char_w * 2, y: char_h * 3 },
+        { x: 0, y: char_h * 4 },
+        { x: char_w, y: char_h * 4 },
+        { x: char_w * 2, y: char_h * 4 },
+        { x: char_w * 3, y: char_h * 4 },
+        { x: char_w * 4, y: char_h * 4 },
+        { x: char_w * 5, y: char_h * 4 },
+      ];
+      const canvas = document.getElementById("my-canvas");
+      const ctx = canvas.getContext("2d");
+
+      //s stand for source and d stands for destination
+      //ctx.drawImage(image, dx, dy);
+      //ctx.drawImage(image, dx, dy, dw, dh);
+      //ctx.drawImage(image, sx, sy, sw, sh, dx, dy, dw, dh);
+      const img = new Image();
+      let counter = 0;
+      img.onload = function () {
+        draw(this);
+      };
+      img.src =
+        "https://th.bing.com/th/id/R.0d299d638ede57b4f5a20068eeb8fa2c?rik=DIn3vBk54fNRtA&riu=http%3a%2f%2fimg09.deviantart.net%2f80ee%2fi%2f2017%2f040%2f7%2fc%2flink_sprite_sheet_by_tiozacdasgalaxias-dayh0s6.png&ehk=YusKloafR3s39aMpyRpAPybnpFBZdJE4QW9Nds6sT6k%3d&risl=&pid=ImgRaw&r=0";
+
+      function draw(srcImg) {
+        let frame = frames[counter];
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+        ctx.drawImage(
+          srcImg,
+          frame.x,
+          frame.y,
+          char_w,
+          char_h,
+          canvas.width / 2 - char_w / 2,
+          canvas.height - char_h,
+          char_w,
+          char_h
+        );
+        counter++;
+        if (counter === frames.length) {
+          counter = 0;
+        }
+        // requestAnimationFrame(draw.bind(null, srcImg));
+        setTimeout(() => {
+          draw(srcImg);
+        }, 35);
+      }
+    </script>
+  </body>
+</html>
