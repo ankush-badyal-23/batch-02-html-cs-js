@@ -3,24 +3,35 @@ import { BaseObject } from "./BaseObject.js";
 export class Ball extends BaseObject {
   constructor(ctx, options) {
     super(ctx, options);
-    this.speed = 0;
-    this.active = false;
-    this.hor_dir = 0;
-    this.ver_dir = 0;
+    this.reset();
+  }
+
+  get radius() {
+    return this.options.radius;
   }
 
   move() {
-    if (this.active) {
-      return;
+    if (!this.active) {
+      this.active = true;
+      this.speed = this.options.speed;
+      this.hor_dir = Math.random() > 0.75 ? -1 : 1;
+      this.ver_dir = -1;
     }
-    this.active = true;
-    this.speed = this.options.speed;
-    this.hor_dir = Math.random() > 0.75 ? -1 : 1;
+  }
+
+  bounceUp() {
     this.ver_dir = -1;
   }
 
-  bounce() {
-    this.ver_dir = -1;
+  rebound() {
+    this.ver_dir *= -1;
+  }
+
+  reset() {
+    this.active = false;
+    this.speed = 0;
+    this.hor_dir = 0;
+    this.ver_dir = 0;
   }
 
   update(delta) {
@@ -37,7 +48,8 @@ export class Ball extends BaseObject {
         this.ver_dir *= -1;
       }
       if (y >= bottom) {
-        this.active = false;
+        this.alive = false;
+        this.reset();
       }
     }
     this.options.x = x + this.speed * this.hor_dir;

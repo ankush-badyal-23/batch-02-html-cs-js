@@ -21,6 +21,9 @@ export class BaseObject {
       return this.options.x;
   }
 
+  set y(value) {
+    this.options.y = value;
+  }
   get y() {
       return this.options.y;
   }
