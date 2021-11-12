@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Paint - Canvas</title>
+    <style>
+      body {
+        margin: 5px;
+        padding: 5px;
+        background-color: #fff;
+      }
+      canvas {
+        border: 1px solid #000;
+      }
+      canvas:active {
+        cursor: crosshair;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <canvas id="my-canvas"></canvas>
+    </main>
+    <script>
+      const canvas = document.querySelector("#my-canvas");
+      const ctx = canvas.getContext("2d");
+      canvas.width = innerWidth * 0.9;
+      canvas.height = innerHeight * 0.9;
+      let isMouseDown = false;
+      let startPoint;
+      let endPoint;
+      let canvasSnapShot;
+      let drawCommand = drawLine;
+      window.addEventListener("keyup", function (e) {
+          console.log(e.key, e.code);
+        if (e.code === "KeyL") {
+          drawCommand = drawLine;
+        } else if (e.code === "KeyR") {
+          drawCommand = drawRect;
+        } else if (e.code === "KeyC") {
+          drawCommand = drawCircle;
+        }
+      });
+      canvas.addEventListener("mousedown", function (e) {
+        isMouseDown = true;
+        startPoint = new Point(e.clientX, e.clientY);
+        canvasSnapShot = ctx.getImageData(0, 0, canvas.width, canvas.height);
+      });
+      canvas.addEventListener("mouseup", function (e) {
+        ctx.putImageData(canvasSnapShot, 0, 0);
+        // drawLine();
+        // drawRect();
+        drawCommand();
+        isMouseDown = false;
+        startPoint = null;
+        endPoint = null;
+        canvasSnapShot = null;
+      });
+      canvas.addEventListener("mousemove", function (e) {
+        if (isMouseDown) {
+          endPoint = new Point(e.clientX, e.clientY);
+          //   drawLine();
+        //   drawRect();
+        drawCommand();
+          ctx.restore();
+        }
+      });
+
+      function drawLine() {
+        ctx.putImageData(canvasSnapShot, 0, 0);
+        ctx.strokeStyle = "#000";
+        ctx.lineWidth = 2;
+        ctx.beginPath();
+        ctx.moveTo(startPoint.x, startPoint.y);
+        ctx.lineTo(endPoint.x, endPoint.y);
+        ctx.stroke();
+        ctx.closePath();
+      }
+
+      function drawRect() {
+        ctx.putImageData(canvasSnapShot, 0, 0);
+        ctx.strokeStyle = "#000";
+        ctx.lineWidth = 2;
+        ctx.beginPath();
+        ctx.rect(
+          startPoint.x,
+          startPoint.y,
+          endPoint.distance(startPoint).x,
+          endPoint.distance(startPoint).y
+        );
+        ctx.stroke();
+        ctx.closePath();
+      }
+
+      function drawCircle() {
+        ctx.putImageData(canvasSnapShot, 0, 0);
+        ctx.strokeStyle = "#000";
+        ctx.lineWidth = 2;
+        ctx.beginPath();
+        ctx.arc(
+          startPoint.x,
+          startPoint.y,
+          endPoint.hypotenuse(startPoint),
+          0,
+          Math.PI * 2
+        );
+        ctx.stroke();
+        ctx.closePath();
+      }
+
+      class Point {
+        constructor(x, y) {
+          this.x = x;
+          this.y = y;
+        }
+        hypotenuse(point) {
+          return Math.sqrt(
+            Math.pow(this.x - point.x, 2) + Math.pow(this.y - point.y, 2)
+          );
+        }
+        distance(point) {
+          return new Point(
+            Math.abs(this.x - point.x),
+            Math.abs(this.y - point.y)
+          );
+        }
+      }
+    </script>
+  </body>
+</html>

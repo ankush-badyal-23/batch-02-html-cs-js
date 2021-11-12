@@ -1,0 +1,11 @@
+body {
+  margin: 5px;
+  padding: 5px;
+  background-color: #fff;
+}
+#my-canvas {
+  border: 1px solid #000;
+}
+#my-canvas:active {
+  cursor: crosshair;
+}
