@@ -1,4 +1,4 @@
-import {TCovidData} from './types/CovidData';
+import { TCovidData } from "./types/CovidData";
 export class APIService {
   private readonly COVID_DATA =
     "https://vaccovid-coronavirus-vaccine-and-treatment-tracker.p.rapidapi.com/api/npm-covid-data/";
