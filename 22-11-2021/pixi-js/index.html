@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pixi.js</title>
+    <script src="https://pixijs.download/release/pixi.js"></script>
+</head>
+<body>
+    <canvas id="app" width="800" height="600"></canvas>
+    <script>
+        const app = new PIXI.Application({
+            view:document.getElementById('app'),
+            width: 1280,
+            height: 720,
+            antialias: true,
+            resolution: 1,
+        });
+        //
+        app.loader
+            .add('bunny','https://pixijs.io/examples/examples/assets/bunny.png')
+            .add('egghead','https://pixijs.io/examples/examples/assets/eggHead.png')
+            .add('monsters','https://pixijs.io/examples/examples/assets/spritesheet/monsters.png')
+            .load(setup);
+
+        function setup(loader, resources) {
+            const monsters = new PIXI.Sprite(resources.monsters.texture);
+            monsters.anchor.set(0.5);
+            monsters.x = app.screen.width / 2;
+            monsters.y = app.screen.height / 2;
+            app.stage.addChild(monsters);
+        }
+
+    </script>
+</body>
+</html>
