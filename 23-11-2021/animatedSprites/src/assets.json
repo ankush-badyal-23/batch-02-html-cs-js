@@ -1,0 +1,8 @@
+{
+  "basePath": "./assets/",
+  "assets": [
+    { "key": "dino", "url": "dino.json" },
+    { "key": "dinoM", "url": "dino-1.json" },
+    { "key": "spooky", "url": "spooky.json" }
+  ]
+}
