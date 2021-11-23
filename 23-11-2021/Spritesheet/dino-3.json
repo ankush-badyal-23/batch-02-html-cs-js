@@ -1,0 +1,21 @@
+{"frames": {
+
+"Jump (10).png":
+{
+	"frame": {"x":1,"y":1,"w":404,"h":445},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":32,"y":27,"w":404,"h":445},
+	"sourceSize": {"w":680,"h":472}
+}},
+"meta": {
+	"app": "https://www.codeandweb.com/texturepacker",
+	"version": "1.0",
+	"image": "dino-3.png",
+	"format": "RGBA8888",
+	"size": {"w":406,"h":447},
+	"scale": "1",
+	"related_multi_packs": [ "dino-1.json", "dino-2.json" ],
+	"smartupdate": "$TexturePacker:SmartUpdate:55e6ee05905d8427205606633354929c:0d99caa1c706e07130e81b2be2c73b64:1c4e985bcfeed7bca96717c659d40a83$"
+}
+}

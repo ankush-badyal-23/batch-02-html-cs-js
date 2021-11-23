@@ -1,0 +1,260 @@
+{"frames": {
+
+"ArrowSign.png":
+{
+	"frame": {"x":107,"y":0,"w":86,"h":87},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":86,"h":87},
+	"sourceSize": {"w":86,"h":87}
+},
+"BG.png":
+{
+	"frame": {"x":0,"y":367,"w":2000,"h":1143},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":2000,"h":1143},
+	"sourceSize": {"w":2000,"h":1143}
+},
+"Bone (1).png":
+{
+	"frame": {"x":592,"y":0,"w":128,"h":128},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":128,"h":128},
+	"sourceSize": {"w":128,"h":128}
+},
+"Bone (2).png":
+{
+	"frame": {"x":720,"y":0,"w":128,"h":128},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":128,"h":128},
+	"sourceSize": {"w":128,"h":128}
+},
+"Bone (3).png":
+{
+	"frame": {"x":848,"y":0,"w":128,"h":128},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":128,"h":128},
+	"sourceSize": {"w":128,"h":128}
+},
+"Bone (4).png":
+{
+	"frame": {"x":976,"y":0,"w":128,"h":128},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":128,"h":128},
+	"sourceSize": {"w":128,"h":128}
+},
+"Bush (1).png":
+{
+	"frame": {"x":1284,"y":128,"w":182,"h":90},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":182,"h":90},
+	"sourceSize": {"w":182,"h":90}
+},
+"Bush (2).png":
+{
+	"frame": {"x":284,"y":0,"w":100,"h":64},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":100,"h":64},
+	"sourceSize": {"w":100,"h":64}
+},
+"Crate.png":
+{
+	"frame": {"x":486,"y":0,"w":106,"h":106},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":106,"h":106},
+	"sourceSize": {"w":106,"h":106}
+},
+"DeadBush.png":
+{
+	"frame": {"x":1152,"y":128,"w":132,"h":74},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":132,"h":74},
+	"sourceSize": {"w":132,"h":74}
+},
+"Sign.png":
+{
+	"frame": {"x":193,"y":0,"w":91,"h":93},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":91,"h":93},
+	"sourceSize": {"w":91,"h":93}
+},
+"Skeleton.png":
+{
+	"frame": {"x":384,"y":0,"w":102,"h":50},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":102,"h":50},
+	"sourceSize": {"w":102,"h":50}
+},
+"Tile (1).png":
+{
+	"frame": {"x":1104,"y":0,"w":128,"h":128},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":128,"h":128},
+	"sourceSize": {"w":128,"h":128}
+},
+"Tile (2).png":
+{
+	"frame": {"x":128,"y":128,"w":128,"h":128},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":128,"h":128},
+	"sourceSize": {"w":128,"h":128}
+},
+"Tile (3).png":
+{
+	"frame": {"x":256,"y":128,"w":128,"h":128},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":128,"h":128},
+	"sourceSize": {"w":128,"h":128}
+},
+"Tile (4).png":
+{
+	"frame": {"x":384,"y":128,"w":128,"h":128},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":128,"h":128},
+	"sourceSize": {"w":128,"h":128}
+},
+"Tile (5).png":
+{
+	"frame": {"x":512,"y":128,"w":128,"h":128},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":128,"h":128},
+	"sourceSize": {"w":128,"h":128}
+},
+"Tile (6).png":
+{
+	"frame": {"x":640,"y":128,"w":128,"h":128},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":128,"h":128},
+	"sourceSize": {"w":128,"h":128}
+},
+"Tile (7).png":
+{
+	"frame": {"x":768,"y":128,"w":128,"h":128},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":128,"h":128},
+	"sourceSize": {"w":128,"h":128}
+},
+"Tile (8).png":
+{
+	"frame": {"x":896,"y":128,"w":128,"h":128},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":128,"h":128},
+	"sourceSize": {"w":128,"h":128}
+},
+"Tile (9).png":
+{
+	"frame": {"x":1024,"y":128,"w":128,"h":128},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":128,"h":128},
+	"sourceSize": {"w":128,"h":128}
+},
+"Tile (10).png":
+{
+	"frame": {"x":1232,"y":0,"w":128,"h":128},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":128,"h":128},
+	"sourceSize": {"w":128,"h":128}
+},
+"Tile (11).png":
+{
+	"frame": {"x":1360,"y":0,"w":128,"h":128},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":128,"h":128},
+	"sourceSize": {"w":128,"h":128}
+},
+"Tile (12).png":
+{
+	"frame": {"x":1488,"y":0,"w":128,"h":128},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":128,"h":128},
+	"sourceSize": {"w":128,"h":128}
+},
+"Tile (13).png":
+{
+	"frame": {"x":1616,"y":0,"w":128,"h":128},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":128,"h":128},
+	"sourceSize": {"w":128,"h":128}
+},
+"Tile (14).png":
+{
+	"frame": {"x":1744,"y":0,"w":128,"h":128},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":128,"h":128},
+	"sourceSize": {"w":128,"h":128}
+},
+"Tile (15).png":
+{
+	"frame": {"x":1872,"y":0,"w":128,"h":128},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":128,"h":128},
+	"sourceSize": {"w":128,"h":128}
+},
+"Tile (16).png":
+{
+	"frame": {"x":0,"y":128,"w":128,"h":128},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":128,"h":128},
+	"sourceSize": {"w":128,"h":128}
+},
+"TombStone (1).png":
+{
+	"frame": {"x":53,"y":0,"w":54,"h":55},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":54,"h":55},
+	"sourceSize": {"w":54,"h":55}
+},
+"TombStone (2).png":
+{
+	"frame": {"x":0,"y":0,"w":53,"h":76},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":53,"h":76},
+	"sourceSize": {"w":53,"h":76}
+},
+"Tree.png":
+{
+	"frame": {"x":1466,"y":128,"w":286,"h":239},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":286,"h":239},
+	"sourceSize": {"w":286,"h":239}
+}},
+"meta": {
+	"app": "https://www.codeandweb.com/texturepacker",
+	"version": "1.0",
+	"image": "spooky.png",
+	"format": "RGBA8888",
+	"size": {"w":2000,"h":1510},
+	"scale": "1",
+	"smartupdate": "$TexturePacker:SmartUpdate:cf9800831c1808b9ce2892bb4b15a17a:96afdc3f00da80d2baed2eec1ef2b286:cb8e927d5803468412f780159aab8e08$"
+}
+}
