@@ -11,7 +11,7 @@ loader.start((l, r) => {
   console.log("resources ", r);
   const bmFont = new BitmapText("Hello World! With Bitmap Fonts", {
     fontName: "Desyrel",
-    fontSize: 64,
+    fontSize: 164,
     align: "center",
   });
   bmFont.anchor.set(0.5);
@@ -19,11 +19,12 @@ loader.start((l, r) => {
   bmFont.y = app.screen.height / 2;
   app.stage.addChild(bmFont);
   
-
-  const msdf = new Text("Hello World! With MSDF Fonts", {
-    fontFamily: "orangejuice20",
-    fontSize: 164,
+  // use https://github.com/soimy/msdf-bmfont-xml to generate the msdff fonts
+  const msdf = new BitmapText("Hello World! With MSDF Fonts", {
+    fontName: "NotoSans-Black",
+    fontSize: 184,
     align: "center",
+    tint: 0xff00ff,
   });
   msdf.anchor.set(0.5);
   msdf.x = app.screen.width / 2;
