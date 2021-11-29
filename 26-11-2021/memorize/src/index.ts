@@ -57,7 +57,9 @@ loader.start((l, r) => {
     console.log(e);
     const card = e.target as Card;
     card.interactive = false;
-    cardSelections.push(card);
+    if (cardSelections.length < 2) {
+      cardSelections.push(card);
+    }
 
     if (cardSelections.length === 2) {
       disableCards();
