@@ -1,4 +1,5 @@
 import * as particles from "@pixi/particle-emitter";
+import {gsap} from "gsap";
 import { Application, Container, ParticleContainer, Graphics } from "pixi.js";
 import { Loader } from "./Loader";
 const app = new Application({
@@ -303,8 +304,15 @@ loader.start((l, r) => {
     emiter2.update(delta * 0.005);
   });
 
-  window.onclick = () => {
-    emiter.emit = !emiter.emit;
-    emiter2.emit = !emiter2.emit;
+  (<HTMLInputElement>document.querySelector("#start")).onclick = () => {
+    emiter.emit = true;
+    emiter2.emit = true;
   };
+  const stop = (<HTMLInputElement>document.querySelector("#stop"));
+  stop.onclick = () => {
+    emiter.emit = false;
+    emiter2.emit = false;
+  };
+  const controlsDiv = (<HTMLInputElement>document.querySelector("#controls"));
+  gsap.fromTo(controlsDiv, {top:0}, {top:700, duration:5, ease: "bounce.out", repeat:-1, yoyo:true, repeatDelay:2, yoyoEase: 'elastic.out'});
 });
