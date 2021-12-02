@@ -1,0 +1,42 @@
+{
+    "frames": {
+        "AB.png": {
+            "frame": {
+                "x": 0,
+                "y": 0,
+                "w": 500,
+                "h": 500
+            },
+            "rotated": false,
+            "trimmed": true,
+            "spriteSourceSize": {
+                "x": 0,
+                "y": 0,
+                "w": 1205,
+                "h": 690
+            },
+            "sourceSize": {
+                "w": 1203,
+                "h": 689
+            },
+            "pivot": {
+                "x": 0.5,
+                "y": 0.5
+            }
+		}
+	},
+    "meta": {
+        "app": "https://www.codeandweb.com/texturepacker",
+        "version": "1.0",
+        "image": "webpPaytable_atlas.webp",
+        "format": "RGBA8888",
+        "size": {
+            "w": 1910,
+            "h": 1630
+        },
+        "scale": "1",
+        "smartupdate": "$TexturePacker:SmartUpdate:30974faa67601176d6fcbe63330dd646:4fce49e300dd8b950ab1df52d0c8058c:c62b286532bc20fb96d3d65eb0c3f65f$",        
+        "hasWebp": true,
+        "hasJp2": true
+    }
+}

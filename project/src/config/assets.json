@@ -1,0 +1,11 @@
+{
+    "baseUrl": "assets/",
+    "manifest": [
+        {"key":"desyrel", "url":"fonts/desyrel.xml", "type":"font"},
+        {"key":"notoBlack", "url":"fonts/NotoSans-Black.fnt", "type":"font"},
+        {"key":"notoBold", "url":"fonts/NotoSans-Bold.fnt", "type":"font"},
+        {"key":"baseBg", "url":"img/baseGame/Basegame_BG.jpg", "type":"image"},
+        {"key":"reelBg", "url":"img/baseGame/Basegame_Reel.png", "type":"image"},
+        {"key":"baseLogo", "url":"img/baseGame/Logo.png", "type":"image"}
+    ]
+}

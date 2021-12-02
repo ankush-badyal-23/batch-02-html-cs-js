@@ -1,0 +1,115 @@
+{
+	"frames": {
+		"symbol_effect_00000.png": {
+			"frame": {
+				"x": 1,
+				"y": 1,
+				"w": 167,
+				"h": 309
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 167,
+				"h": 309
+			},
+			"sourceSize": {
+				"w": 167,
+				"h": 309
+			}
+		},
+		"symbol_effect_00001.png": {
+			"frame": {
+				"x": 170,
+				"y": 1,
+				"w": 167,
+				"h": 309
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 167,
+				"h": 309
+			},
+			"sourceSize": {
+				"w": 167,
+				"h": 309
+			}
+		},
+		"symbol_effect_00002.png": {
+			"frame": {
+				"x": 339,
+				"y": 1,
+				"w": 167,
+				"h": 309
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 167,
+				"h": 309
+			},
+			"sourceSize": {
+				"w": 167,
+				"h": 309
+			}
+		},
+		"symbol_effect_00003.png": {
+			"frame": {
+				"x": 508,
+				"y": 1,
+				"w": 167,
+				"h": 309
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 167,
+				"h": 309
+			},
+			"sourceSize": {
+				"w": 167,
+				"h": 309
+			}
+		},
+		"symbol_effect_00004.png": {
+			"frame": {
+				"x": 677,
+				"y": 1,
+				"w": 167,
+				"h": 309
+			},
+			"rotated": false,
+			"trimmed": false,
+			"spriteSourceSize": {
+				"x": 0,
+				"y": 0,
+				"w": 167,
+				"h": 309
+			},
+			"sourceSize": {
+				"w": 167,
+				"h": 309
+			}
+		}
+	},
+	"meta": {
+		"app": "http://www.codeandweb.com/texturepacker",
+		"version": "1.0",
+		"image": "trail_atlas.png",
+		"format": "RGBA8888",
+		"size": {
+			"w": 845,
+			"h": 311
+		},
+		"scale": "1"
+	}
+}
