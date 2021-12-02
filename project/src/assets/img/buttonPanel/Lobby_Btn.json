@@ -1,0 +1,39 @@
+{"frames": {
+
+"Lobby_Disable.png":
+{
+	"frame": {"x":0,"y":0,"w":118,"h":32},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":118,"h":32},
+	"sourceSize": {"w":118,"h":32},
+	"pivot": {"x":0.5,"y":0.5}
+},
+"Lobby_Normal.png":
+{
+	"frame": {"x":118,"y":0,"w":118,"h":32},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":118,"h":32},
+	"sourceSize": {"w":118,"h":32},
+	"pivot": {"x":0.5,"y":0.5}
+},
+"Lobby_Over.png":
+{
+	"frame": {"x":236,"y":0,"w":118,"h":32},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":118,"h":32},
+	"sourceSize": {"w":118,"h":32},
+	"pivot": {"x":0.5,"y":0.5}
+}},
+"meta": {
+	"app": "http://www.codeandweb.com/texturepacker",
+	"version": "1.0",
+	"image": "Lobby_Btn.png",
+	"format": "RGBA8888",
+	"size": {"w":354,"h":32},
+	"scale": "1",
+	"smartupdate": "$TexturePacker:SmartUpdate:dd979f59e8303d17af4e11fb891f9397:cc2b9da54ea1a6bf231db3b10dfbf531:219d143ccd00acdb54940b1cea2a2e95$"
+}
+}
