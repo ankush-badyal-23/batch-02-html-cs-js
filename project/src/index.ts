@@ -10,13 +10,13 @@ window.addEventListener("load", () => {
         sharedTicker: true,
     });
     gameDiv.appendChild(game.view);
-    game.load();
+    game.start();
     //#DEBUG
-    (<any>window)["app"] = game;
+    (<any>window)["app"] = game.app;
     (<any>window)["stage"] = game.stage;
     //#ENDDEBUG
     
     window.addEventListener("resize", () => {
-       //
+       game.resize();
     });
   });
