@@ -1,0 +1,23 @@
+{
+  "name": "backgrounds",
+  "view": {
+    "baseBGLayer": {
+      "type": "layer",
+      "name": "baseBGLayer",
+      "alignCenter":true,
+      "children": {
+        "baseBG": {
+          "name": "baseBG",
+          "type": "image",
+          "texture": "baseBg",
+          "x": 0,
+          "y": 0,
+          "width": 1280,
+          "height": 720,
+          "anchorX": 0.5,
+          "anchorY": 0.5
+        }
+      }
+    }
+  }
+}

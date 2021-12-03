@@ -29,7 +29,11 @@ export function getTexture(key: string): Texture {
     return textures[key];
 }
 
-export function getTextures(key: string): Texture[] {
-    const frameKeys = Object.keys(textures).filter(keys => keys.startsWith(key));
-    return frameKeys.map(key => textures[key]);
+export function getTextures(key: string|string[]): Texture[] {
+    if(typeof key === 'string') {
+        const frameKeys = Object.keys(textures).filter(keys => keys.startsWith(key));
+        return frameKeys.map(key => textures[key]);
+    } else {
+        return key.map(k => getTexture(k));
+    }
 }
