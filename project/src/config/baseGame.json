@@ -1,0 +1,40 @@
+{
+  "name": "BaseGame",
+  "view": {
+    "logo": {
+      "name": "logo",
+      "type": "image",
+      "texture": "baseLogo",
+      "x": 0,
+      "y": 0,
+      "anchorX": 0.5,
+      "scaleX": 0.5,
+      "scaleY": 0.5,
+      "width": 316,
+      "height": 93
+    },
+    "reelContainer": {
+      "name": "reelContainer",
+      "type": "layer",
+      "children": {
+        "reelBG": {
+          "name": "reelBG",
+          "type": "image",
+          "texture": "reelBg",
+          "x": 0,
+          "y": 0,
+          "anchorX": 0.5,
+          "anchorY": 0.5,
+          "width": 1080,
+          "height": 636,
+          "alignCenter": true
+        },
+        "reels": {
+          "name":"reels",
+          "type": "layer",
+          "alignCenter": true
+        }
+      }
+    }
+  }
+}

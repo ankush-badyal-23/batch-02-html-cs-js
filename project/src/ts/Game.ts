@@ -1,7 +1,9 @@
 import { Application, Container } from "pixi.js";
 import assets from "../config/assets.json";
 import backgrounds from "../config/background.json";
+import baseGameConfig from "../config/baseGame.json";
 import { BackgroundScene } from "./Scenes/BackgroundScene";
+import { BaseGameScene } from "./Scenes/BaseGameScene";
 import { BaseView } from "./Scenes/BaseView";
 import { IDisplayConfig } from "./Scenes/IDisplayConfig";
 import { load } from "./utils/Preloader";
@@ -24,19 +26,30 @@ export class Game {
   public start(): void {
     console.log("Game started");
     load(assets, () => {
+      this.app.ticker.add(this.update, this);
       const bgScene = new BackgroundScene(
         <IDisplayConfig>(<unknown>backgrounds)
       );
       this.scenes[bgScene.name] = bgScene;
-      this.stage.addChild(bgScene);
+      const baseGame = new BaseGameScene(<IDisplayConfig>(<unknown>baseGameConfig));
+      this.scenes[baseGame.name] = baseGame;
+      this.stage.addChild(bgScene, baseGame);
       this.resize();
     });
   }
 
-  public resize(): void {
+  private update():void {
     Object.values(this.scenes).forEach((scene: BaseView) => {
-        let scale = Math.min(1280/this.app.view.width, 720/this.app.view.height);
-        scene.resize(this.app.screen.width/2, this.app.screen.height/2, scale);
+      scene.update();
+    });
+  }
+
+  public resize(): void {
+    let minScale = Math.min(this.app.screen.width/1280, this.app.screen.height/720);
+    let maxScale = Math.max(this.app.screen.width/1280, this.app.screen.height/720);
+    console.log('scale', minScale, maxScale, this.app.screen.width/2, this.app.screen.height/2);
+    Object.values(this.scenes).forEach((scene: BaseView) => {
+        scene.resize(this.app.screen.width/2, this.app.screen.height/2, {minScale, maxScale});
     });
   }
 }

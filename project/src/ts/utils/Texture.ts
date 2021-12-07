@@ -16,6 +16,7 @@ export function processResources(res: TResources): void {
             });
         }
     });
+    console.log("textures", textures);
 }
 
 export function getResources(key: string): LoaderResource {

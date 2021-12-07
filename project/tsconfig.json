@@ -15,6 +15,10 @@
     "sourceMap": true,
     "outDir": "./dist",
     "removeComments": true,
+    "lib": [
+      "esNext",
+      "dom"
+    ],
   },
   "include": [
     "src/**/*.ts"

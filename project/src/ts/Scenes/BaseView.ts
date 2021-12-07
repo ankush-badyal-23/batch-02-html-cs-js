@@ -47,6 +47,8 @@ export class BaseView extends Container {
     console.log(`View [${json.name}] created`, this);
   }
 
+  public update(delta?: number): void {}
+
   public getImage(key: string): Sprite {
     return this._images[key];
   }
@@ -97,13 +99,18 @@ export class BaseView extends Container {
     this._layers = null;
   }
 
-  public resize(centerX: number, centerY: number, scale: number): void {
-    this.scale.set(scale);
-    Object.keys(this._layers).forEach((key) => {
-      let layer = this._layers[key];
-      if ((<any>layer).alignCenter) {
-        layer.x = centerX;
-        layer.y = centerY;
+  public resize(
+    centerX: number,
+    centerY: number,
+    scale: { minScale: number; maxScale: number }
+  ): void {
+    // this.scale.set(scale.minScale);
+    Object.values(this._components).forEach((comp: any) => {
+      if (comp.alignCenter) {
+        comp.x = centerX;
+        comp.y = centerY;
+        comp.scale.x = comp.scale.x * scale.minScale;
+        comp.scale.y = comp.scale.y * scale.minScale;
       }
     });
   }
@@ -116,19 +123,27 @@ export class BaseView extends Container {
       component.name = component.name || key;
       component.x = componentJson.x ?? 0;
       component.y = componentJson.y ?? 0;
-      component.scale.x = componentJson.scaleX ?? 1;
-      component.scale.y = componentJson.scaleY ?? 1;
+      console.log(
+        "component",
+        componentJson.name,
+        componentJson.scaleX,
+        componentJson
+      );
       component.rotation = componentJson.rotation ?? 0;
       component.alpha = componentJson.alpha ?? 1;
       component.visible = componentJson.visible ?? true;
+      (<any>component).alignCenter = componentJson.alignCenter ?? false;
       if (componentJson.width !== undefined) {
         component.width = componentJson.width;
       }
       if (componentJson.height !== undefined) {
         component.height = componentJson.height;
       }
+      component.scale.x = componentJson.scaleX ?? 1;
+      component.scale.y = componentJson.scaleY ?? 1;
       this._components[key] = component;
       parent.addChild(component);
+      console.log("component", component.name, component.scale, componentJson);
     }
   }
 
@@ -177,7 +192,6 @@ export class BaseView extends Container {
     let layer = new Container();
     layer.pivot.x = json.anchorX ?? 0;
     layer.pivot.y = json.anchorY ?? 0;
-    (<any>layer).alignCenter = json.alignCenter ?? false;
     this._layers[json.name] = layer;
     if (json.children) {
       this._create(json.children, layer);

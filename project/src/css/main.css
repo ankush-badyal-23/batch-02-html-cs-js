@@ -15,8 +15,6 @@
 
 #game > canvas {
     display: block;
-    width: 1280px;
-    height: 720px;
 }
 
 #loader {
