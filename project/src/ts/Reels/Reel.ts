@@ -34,10 +34,9 @@ export class Reel extends Container {
   protected moveReel(): void {
     gsap.to(this, {
       y: `+=${reelConfig.symbolHeight}`,
-      duration: 0.01,
+      duration: 0.05,
       ease: "none",
       repeat: -1,
-      delay: 0,
       onStart: () => {
         console.log("move reel");
         this._symbols.forEach((symbol) => symbol.blur(true));
