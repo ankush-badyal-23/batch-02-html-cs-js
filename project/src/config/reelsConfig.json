@@ -3,8 +3,9 @@
     "cols": 5,
     "width": 212,
     "symbolHeight":227,
-    "offsetX":0,
-    "offsetY":0,
+    "offsetX":-434,
+    "padding":5,
+    "offsetY":-681,
     "symbolsSet": [
         "symbols_wild.png",
         "symbols_h1_neptune.png",
@@ -19,6 +20,21 @@
         "symbols_Royal_10.png",
         "symbols_Royal_9.png",
         "symbols_scatter.png"
+    ],
+    "symbolsBlurSet": [
+        "symbols_blur_wild_blur.png",
+        "symbols_blur_h1_neptune_blur.png",
+        "symbols_blur_h2_siren_blur.png",
+        "symbols_blur_h3_seahores_blur.png",
+        "symbols_blur_h4_dolphin_blur.png",
+        "symbols_blur_h5_treasurebox_blur.png",
+        "symbols_blur_Royal_A_blur.png",
+        "symbols_blur_Royal_K_blur.png",
+        "symbols_blur_Royal_Q_blur.png",
+        "symbols_blur_Royal_J_blur.png",
+        "symbols_blur_Royal_10_blur.png",
+        "symbols_blur_Royal_9_blur.png",
+        "symbols_blur_scatter_blur.png"
     ],
     "reelSet": [
         ["5", "6", "2", "8", "1", "7", "5", "3", "4", "8", "2", "7", "6", "1", "8", "3", "5", "0", "6", "2", "8", "4", "5", "7", "1", "6", "3", "5", "2", "4", "8", "1", "6", "0", "5", "3", "8", "9", "7", "2", "6", "4", "7", "3", "0", "6", "1", "8", "0", "7", "4", "5", "3", "8", "7", "6", "2", "5", "0", "9", "7", "4", "6", "3", "8", "5", "7", "2", "4", "8", "1", "6", "3", "7", "0", "4", "1", "6", "5", "2", "7", "8", "3", "4", "6", "1", "8", "2", "7", "5", "3", "1", "7", "6", "4", "2", "8", "0", "7", "4", "6", "3", "8", "5", "7", "9", "4", "8", "3", "6", "5", "7", "8", "9", "6"],

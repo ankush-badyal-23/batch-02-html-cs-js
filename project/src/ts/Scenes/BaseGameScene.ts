@@ -8,6 +8,10 @@ export class BaseGameScene extends BaseView {
         super(json);
         this.reelContainer = new Reels(this.getLayer("reels"));
         console.log(this.reelContainer);
+        setTimeout(() => {
+            this.reelContainer.spin();
+        }, 10000);
+
     }
     public resize(centerX: number, centerY: number, scale: {minScale:number, maxScale:number}): void {
         super.resize(centerX, centerY, scale);

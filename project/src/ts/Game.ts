@@ -34,7 +34,7 @@ export class Game {
       const baseGame = new BaseGameScene(<IDisplayConfig>(<unknown>baseGameConfig));
       this.scenes[baseGame.name] = baseGame;
       this.stage.addChild(bgScene, baseGame);
-      this.resize();
+      this.resize(); 
     });
   }
 

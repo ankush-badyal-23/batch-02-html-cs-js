@@ -7,6 +7,7 @@
         {"key":"baseBg", "url":"img/baseGame/Basegame_BG.jpg", "type":"image"},
         {"key":"reelBg", "url":"img/baseGame/Basegame_Reel.png", "type":"image"},
         {"key":"baseLogo", "url":"img/baseGame/Logo.png", "type":"image"},
-        {"key":"symbols", "url":"img/symbols/symbols.json", "type":"spriteSheet"}
+        {"key":"symbols", "url":"img/symbols/symbols.json", "type":"spriteSheet"},
+        {"key":"symbols_blur", "url":"img/symbols/symbols_blur.json", "type":"spriteSheet"}
     ]
 }
